@@ -38,7 +38,7 @@ zip_name = 'rf_clf.zip'
 @st.cache(allow_output_mutation=True)
 def load_model():
   with zipfile.ZipFile(zip_name, 'r') as zp:
-    rf_model = pickle.loads(zp.open(filename).read())
+    rf_model = pickle.load(zp.open(filename).read())
 
   return rf_model
 
